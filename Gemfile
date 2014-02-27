@@ -49,6 +49,7 @@ gem 'schema_plus'
 gem 'foundation-rails'
 gem 'google-analytics-rails'
 gem 'newrelic_rpm'
+gem 'coveralls', require: false
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
