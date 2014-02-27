@@ -17,3 +17,4 @@
 config/database.yml
 *.swp
 *.swo
+01_env_vars.rb
