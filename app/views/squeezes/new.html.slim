@@ -4,7 +4,7 @@ header
       = image_tag 'meurio.png'
       span Salve a Internet!
     .counter
-      span= Subscription.count
+      span= Squeeze.count
       span Defensores da Internet
 
   .row
@@ -14,5 +14,8 @@ header
       p Esta decisão está sendo tomada agora, através de negociações a portas fechadas. O voto dos deputados poderá acontecer já nos próximos dias. Só será possível reverter a situação se milhares de cidadãos mostrarem aos deputados que quem tentar destruir a Internet vai comprar uma briga com a sociedade.
       p Não temos tempo a perder. É a hora de usar a Internet para salvar a Internet!
 
-      = form_for @subscription do |form|
+      = form_for @squeeze do |form|
+        = form.text_field :first_name
+        = form.text_field :last_name
         = form.email_field :email
+        = form.submit nil, id: 'squeeze-submit-button'

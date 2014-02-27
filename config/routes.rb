@@ -1,7 +1,7 @@
 Salveainternet::Application.routes.draw do
-  root 'subscriptions#new'
+  root 'squeezes#new'
 
-  resources :subscriptions, only: [:new, :create]
+  resources :squeezes, only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
