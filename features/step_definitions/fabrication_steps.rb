@@ -46,5 +46,6 @@ end
 
 Then /^I should see the following (.*) in the database:$/ do |model_name, table|
   klass = Fabrication::Cucumber::StepFabricator.new(model_name).klass
-  klass.where(table.rows_hash.symbolize_keys).count.should == 1
+  # TODO: pull request all rspec deprecation warnings fixes
+  expect(klass.where(table.rows_hash.symbolize_keys).count).to be_eql 1
 end
