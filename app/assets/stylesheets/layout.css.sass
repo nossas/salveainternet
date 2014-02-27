@@ -1,9 +1,82 @@
+h2, h3
+  text-transform: uppercase
+  color: $yellow
+
+p
+  color: $light_gray
+  font-size: 1.2em
+
 header
-  .meu-rio, .counter
-    +grid-column(6)
-  .counter
-    text-align: right
+  background: $dark_gray
 
 .wraper
   text-align: center
+  padding: 1em 0
   +grid-column(12)
+
+.meu-rio-and-counter
+  margin-bottom: 2em
+  .meu-rio, .counter
+    text-transform: uppercase
+    color: $light_gray
+    +grid-column(6)
+
+  .counter
+    .digits-and-label
+      float: right
+      .digits, .digits-label
+        float: left
+
+form
+  background: $yellow
+  padding: 1em 0
+  +grid-column(12)
+  .button
+    width: 100%
+
+.first_name_field, .last_name_field, .email_field, .submit_button
+  +grid-column(3)
+  input
+    margin: 0
+
+.submit_button
+  input
+    padding: .5em
+
+.title-left
+  text-align: right
+  +grid-column(7)
+
+.box-right
+  +grid-column(5)
+
+.box
+  background: $dark_gray
+  color: $yellow
+  text-align: left
+  padding: 1.5em
+  font-size: 1.2em
+  line-height: 1.2em
+
+.bottom-text
+  +grid-column(6, true, true)
+
+[class^="slide-"]
+  padding: 2em 0
+
+@media (max-width: 750px)
+  form
+    +grid-column(6, true, true)
+  .first_name_field, .last_name_field, .email_field, .submit_button
+    +grid-column(12)
+  .first_name_field, .last_name_field, .email_field
+    margin-bottom: 1em
+
+@media (max-width: 500px)
+  form
+    +grid-column(8, true, true)
+  
+  .meu-rio-and-counter
+    .meu-rio, .counter
+      text-align: left
+      +grid-column(12)

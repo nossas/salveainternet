@@ -25,5 +25,6 @@ if Rails.env.production?
     "Chico das Verduras <dep.chicodasverduras@camara.leg.br>"
   ]
 else
-  DEPUTIES_EMAILS = ENV["DEPUTIES_EMAILS"]
+  raise "TEST_EMAIL is missing" if ENV["TEST_EMAIL"].nil?
+  DEPUTIES_EMAILS = ENV["TEST_EMAIL"]
 end

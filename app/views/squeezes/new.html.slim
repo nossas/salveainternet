@@ -1,21 +1,47 @@
 header
-  .row
+  .row.meu-rio-and-counter
     .meu-rio
       = image_tag 'meurio.png'
       span Salve a Internet!
     .counter
-      span= Squeeze.count
-      span Defensores da Internet
+      .digits-and-label
+        .digits= Squeeze.count
+        .digits-label
+          | Defensores
+          br
+          | da Internet
 
   .row
     .wraper
-      h2 As teles estão querendo limitar seu acesso à sites e aplicativos de Internet
+      h2
+        | As teles estão querendo limitar seu
+        br
+        | acesso à sites e aplicativos de Internet
       p Empresas como Oi, Vivo, Tim, Net e outras teles estão tentando convencer os deputados a deixá-las determinar o que você pode e não pode ver na internet, dependendo de quanto você e os diferentes sites e aplicativos estiverem dispostos a pagar. 
       p Esta decisão está sendo tomada agora, através de negociações a portas fechadas. O voto dos deputados poderá acontecer já nos próximos dias. Só será possível reverter a situação se milhares de cidadãos mostrarem aos deputados que quem tentar destruir a Internet vai comprar uma briga com a sociedade.
-      p Não temos tempo a perder. É a hora de usar a Internet para salvar a Internet!
+      p
+        strong Não temos tempo a perder. É a hora de usar a Internet para salvar a Internet!
 
-      = form_for @squeeze do |form|
-        = form.text_field :first_name
-        = form.text_field :last_name
-        = form.email_field :email
-        = form.submit nil, id: 'squeeze-submit-button'
+      - if session[:squeeze_id].nil?
+        = form_for @squeeze do |form|
+          .row
+            .first_name_field
+              = form.text_field :first_name, placeholder: "Insira seu primeiro nome"
+            .last_name_field
+              = form.text_field :last_name, placeholder: "Insira seu sobrenome nome"
+            .email_field
+              = form.email_field :email, placeholder: "Insira seu email"
+            .submit_button
+              = form.submit "Enviar email", id: 'squeeze-submit-button', class: [:button, :radius]
+      - else
+        .share
+
+.slide-2
+  .row
+    .title-left
+      h2 O Brasil está prestes a aprovar a primeira lei que regula a Internet no país.
+    .box-right
+      .box O chamado Marco Civil da Internet foi criado para garantir os direitos e deveres dos usuários de Internet, evitando abusos, quebras de privacidade, e crimes como pornografia infantil e assédio.
+  .row
+    .bottom-text
+      h3 Parece bom, né? Mas alguém está tentando atrapalhar as coisas…
