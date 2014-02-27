@@ -1,3 +1,7 @@
+{<img src="https://travis-ci.org/meurio/salveainternet.png?branch=master" alt="Build Status" />}[https://travis-ci.org/meurio/salveainternet]
+{<img src="https://codeclimate.com/github/meurio/salveainternet.png" />}[https://codeclimate.com/github/meurio/salveainternet]
+{<img src="https://coveralls.io/repos/meurio/salveainternet/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/meurio/salveainternet]
+
 == README
 
 This README would normally document whatever steps are necessary to get the
