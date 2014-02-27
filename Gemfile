@@ -46,6 +46,7 @@ gem 'rails_12factor'
 gem 'slim-rails'
 gem 'inherited_resources'
 gem 'schema_plus'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
