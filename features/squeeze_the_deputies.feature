@@ -16,5 +16,12 @@ Feature: squeeze the deputies
       | last_name   | Iensen                |
       | email       | nicolas@meurio.org.br |
 
+  @javascript
   Scenario: when I don't fill the form correctly
+    Given I'm in "the homepage"
+    When I press "the squeeze form submit button"
+    Then I should see "the last name field with error"
+    And I should see "the first name field with error"
+    And I should see "the email field with error"
+
   Scenario: when I already squeezed the deputies
