@@ -14,6 +14,15 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require jquery.facebox
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function() {
+  $(document).foundation();
+
+  $(document).on('page:change', function() {
+    return $.facebox.settings.inited = false;
+  });  
+
+  $('a[rel*=facebox]').facebox();
+});

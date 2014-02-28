@@ -47,6 +47,7 @@ p
 form
   background: $yellow
   padding: 1em 0
+  margin-bottom: 1em
   +grid-column(12)
   .button
     width: 100%
@@ -83,6 +84,17 @@ form
 
 [class^="slide-"]
   padding: 2em 0
+
+#facebox
+  .popup
+    .email
+      width: 700px
+    .close_image
+      &:last-child
+        display: none
+
+#email
+  display: none
 
 @media (max-width: 750px)
   form
