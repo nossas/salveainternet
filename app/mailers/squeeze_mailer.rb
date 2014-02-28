@@ -1,5 +1,5 @@
 class SqueezeMailer < ActionMailer::Base
-  default from: "Alessandra - Meu Rio <contato@meurio.org.br>"
+  default from: "Rodrigo - Meu Rio <contato@meurio.org.br>"
 
   def dont_let_them_limit_our_access_to_the_internet squeeze
     @squeeze = squeeze
