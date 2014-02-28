@@ -42,8 +42,6 @@ $(function() {
     return false;
   });
 
-  $.stellar();
-
   new_squeeze_y = $(".new_squeeze").position().top
   $(window).scroll(function(){
     if(window.scrollY >= new_squeeze_y){
