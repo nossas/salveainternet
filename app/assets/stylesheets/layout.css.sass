@@ -131,6 +131,13 @@ form
 
 .slide-4
   background: asset-url("slide_4_bg.png") bottom center
+  h2
+    color: white
+  .left-text
+    +grid-column(4)
+    text-align: right
+  .box-right
+    +grid-column(8)
 
 .slide-5
   background: asset-url("slide_5_bg.png") center center
@@ -153,6 +160,12 @@ form
     .title-left
       text-align: center
     .title-left, .box-right, .bottom-text
+      +grid-column(12)
+
+  .slide-4
+    .left-text
+      text-align: center
+    .left-text, .box-right
       +grid-column(12)
 
 
