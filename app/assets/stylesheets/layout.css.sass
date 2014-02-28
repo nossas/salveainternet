@@ -7,7 +7,7 @@ p
   font-size: 1.2em
 
 .slide-1
-  background: $dark_gray
+  background: asset-url("slide_1_bg.png")
 
 .wraper
   text-align: center
@@ -21,11 +21,28 @@ p
     color: $light_gray
     +grid-column(6)
 
+  .meu-rio
+    img
+      margin-right: 2em
+
   .counter
     .digits-and-label
       float: right
       .digits, .digits-label
         float: left
+      .digits-label
+        padding-top: 2px
+      .digits
+        margin-right: .5em
+        span
+          color: $yellow
+          background: asset-url("counter_bg.png") no-repeat
+          width: 30px
+          height: 35px
+          font-size: 1.5em
+          line-height: 1.5em
+          text-align: center
+          display: inline-block
 
 form
   background: $yellow

@@ -1,11 +1,13 @@
 .slide-1
   .row.meu-rio-and-counter
     .meu-rio
-      /= image_tag 'meurio.png'
+      = link_to(image_tag('meurio.png'), "http://www.meurio.org.br/")
       span Salve a Internet!
     .counter
       .digits-and-label
-        .digits= Squeeze.count
+        .digits
+          - Squeeze.count.to_s.chars.each do |c|
+            span= c
         .digits-label
           | Defensores
           br

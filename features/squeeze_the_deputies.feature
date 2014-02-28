@@ -23,5 +23,3 @@ Feature: squeeze the deputies
     Then I should see "the first name field with error"
     And I should see "the last name field with error"
     And I should see "the email field with error"
-
-  Scenario: when I already squeezed the deputies
