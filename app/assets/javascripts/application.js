@@ -38,4 +38,16 @@ $(function() {
     ); 
     return false;
   });
+
+  new_squeeze_y = $(".new_squeeze").position().top
+  $(window).scroll(function(){
+    if(window.scrollY >= new_squeeze_y){
+      $(".form_wraper").addClass("fixed");
+      $(".email_message").css("margin-top", $(".form_wraper").height() + "px");
+    }
+    else{
+      $(".form_wraper").removeClass("fixed");
+      $(".email_message").css("margin-top", "0");
+    }
+  });
 });

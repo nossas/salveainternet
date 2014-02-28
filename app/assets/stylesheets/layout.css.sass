@@ -7,7 +7,7 @@ p
   font-size: 1.2em
 
 .slide-1
-  background: asset-url("slide_1_bg.png")
+  background: asset-url("slide_1_bg.png") center top
 
 .wraper
   text-align: center
@@ -79,8 +79,6 @@ form
   font-size: 1.2em
   line-height: 1.2em
 
-.bottom-text
-  +grid-column(6, true, true)
 
 [class^="slide-"]
   padding: 2em 0
@@ -112,6 +110,39 @@ form
 
 .highlight
   color: $yellow
+
+.slide-2
+  background: asset-url("slide_2_bg.png") top center
+  h2, h3
+    color: $white
+  h3
+    text-align: center
+  .box-right
+    margin-top: 5px
+  .bottom-text
+    margin-top: 5em
+    +grid-column(8, true, true)
+
+.slide-3
+  background: asset-url("slide_3_bg.png") bottom center
+
+.slide-4
+  background: asset-url("slide_4_bg.png") bottom center
+
+.slide-5
+  background: asset-url("slide_5_bg.png") center center
+
+.slide-6
+  background: asset-url("slide_6_bg.png") center center
+
+.slide-7
+  background: asset-url("slide_7_bg.png") center center
+
+.slide-8
+  background: asset-url("slide_8_bg.png") center center
+
+.slide-9
+  background: $green
 
 @media (max-width: 750px)
   form
