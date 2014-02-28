@@ -177,6 +177,13 @@ form
 
 .slide-9
   background: $green
+  h2, p
+    color: white
+  .h2-left
+    +grid-column(4)
+    text-align: right
+  .p-right
+    +grid-column(8)
 
 
 @media (max-width: 900px)
@@ -212,6 +219,13 @@ form
       +grid-column(12)
     .h2-left
       text-align: center
+
+  .slide-9
+    .h2-left
+      +grid-column(12)
+      text-align: center
+    .p-right
+      +grid-column(12)
 
 
 @media (max-width: 750px)
