@@ -25,4 +25,17 @@ $(function() {
   });  
 
   $('a[rel*=facebox]').facebox();
+
+  if(window.location.hash){
+    $.facebox({div: window.location.hash}, window.location.hash.replace("#", ""));
+  }
+
+  $(".facebook-share-button").click(function(event){
+    window.open(
+      $(event.target).attr("href"), 
+      'facebox-share-dialog', 
+      'width=626,height=436'
+    ); 
+    return false;
+  });
 });

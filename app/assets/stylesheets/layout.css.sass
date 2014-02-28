@@ -87,13 +87,27 @@ form
 
 #facebox
   .popup
+    .share
+      width: 700px
+      text-align: center
+      h2
+        font-size: 1.5em
+        color: $light_gray
+      h3
+        font-size: 1.2em
+        color: $light_gray
+      p
+        font-size: 1em
+      .button
+        margin: 0
+        background: $facebook_blue
     .email
       width: 700px
     .close_image
       &:last-child
         display: none
 
-#email
+#email, #share
   display: none
 
 @media (max-width: 750px)

@@ -44,3 +44,15 @@
   p Para o povo brasileiro, a neutralidade da rede é inegociável! 
   p Estamos de olho!
   p Responda publicamente a essa demanda enviando um e-mail para resposta@paneladepressao.org.br
+
+#share
+  h2 Seu Email foi Enviado!
+  p 
+    | Uma das belezas da Internet é que é muito fácil espalhar informações usando
+    br
+    | as suas redes. E agora é a hora de usar a internet para salvar a internet!
+  h3
+    | Compartilhe esta mobilização
+    br
+    | com os seus amigos agora!
+  = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{request.url}", class: [:button, :radius, "facebook-share-button"]

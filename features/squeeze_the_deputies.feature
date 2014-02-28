@@ -1,5 +1,6 @@
 Feature: squeeze the deputies
   
+  @javascript
   Scenario: when I fill the form correctly
     Given I'm in "the homepage"
     And I fill in "the first name field" with "Nícolas"
@@ -7,7 +8,6 @@ Feature: squeeze the deputies
     And I fill in "the email field" with "nicolas@meurio.org.br"
     When I press "the squeeze form submit button"
     Then I should be in "the homepage"
-    And I should not see "the squeeze form"
     And I should see "the share buttons"
     And an email called "don't let them limit our access to the Internet" should be sent
     And an email called "you can't negotiate the neutrality of the Internet" should be sent
