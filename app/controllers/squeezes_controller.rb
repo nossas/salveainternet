@@ -1,5 +1,6 @@
 class SqueezesController < InheritedResources::Base
   def create
+    params[:squeeze][:ip] = request.remote_ip
     create! do |success|
       success.html do
         session[:squeeze_id] = resource.id
