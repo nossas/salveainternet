@@ -6,8 +6,6 @@ p
   color: $light_gray
   font-size: 1.2em
 
-.slide-1
-  background: asset-url("slide_1_bg.png") center top
 
 .wraper
   text-align: center
@@ -81,7 +79,7 @@ form
 
 
 [class^="slide-"]
-  padding: 2em 0
+  padding: 4em 0
 
 #facebox
   .popup
@@ -111,6 +109,10 @@ form
 .highlight
   color: $yellow
 
+.slide-1
+  background: asset-url("slide_1_bg.png") center top
+  padding-top: 1em
+
 .slide-2
   background: asset-url("slide_2_bg.png") top center
   h2, h3
@@ -125,6 +127,7 @@ form
 
 .slide-3
   background: asset-url("slide_3_bg.png") bottom center
+  text-align: center
 
 .slide-4
   background: asset-url("slide_4_bg.png") bottom center
@@ -143,6 +146,15 @@ form
 
 .slide-9
   background: $green
+
+
+@media (max-width: 900px)
+  .slide-2
+    .title-left
+      text-align: center
+    .title-left, .box-right, .bottom-text
+      +grid-column(12)
+
 
 @media (max-width: 750px)
   form
