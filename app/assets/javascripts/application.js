@@ -49,5 +49,13 @@ $(function() {
       $(".form_wraper").removeClass("fixed");
       $(".email_message").css("margin-top", "0");
     }
+
+    // Parallax
+    // scrollProgress = ((window.scrollY/$(document).height()) * 100) + "%";
+    // invertedScrollProgress = (100 - ((window.scrollY/$(document).height()) * 100)) + "%";
+    // $(".slide-2").css("background-position", scrollProgress + " " + scrollProgress);
+    // $(".slide-3").css("background-position-y", scrollProgress);
+    // $(".slide-4").css("background-position-x", scrollProgress);
+    // $(".slide-5").css("background-position-x", invertedScrollProgress);
   });
 });

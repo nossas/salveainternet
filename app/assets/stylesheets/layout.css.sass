@@ -134,18 +134,22 @@ form
     +grid-column(8, true, true)
 
 .slide-3
-  background: asset-url("slide_3_bg.png") bottom center
+  background: asset-url("slide_3_bg.png") center 0%
   text-align: center
 
 .slide-4
   background: asset-url("slide_4_bg.png") bottom center
-  h2
+  h2, h3
     color: white
   .left-text
-    +grid-column(4)
+    +grid-column(6)
     text-align: right
-  .box-right
-    +grid-column(8)
+  .box-left, .image-right
+    +grid-column(6)
+  .image-right
+    text-align: center
+  .wraper
+    margin-top: 1em
 
 .slide-5
   background: asset-url("slide_5_bg.png") center center
@@ -212,8 +216,10 @@ form
   .slide-4
     .left-text
       text-align: center
-    .left-text, .box-right
+    .left-text, .box-left, .image-right
       +grid-column(12)
+    .box-left, .image-right
+      margin-bottom: 1em
 
   .slide-5
     .h2-left
