@@ -6,6 +6,6 @@ class SqueezeMailer < ActionMailer::Base
   end
 
   def you_cant_negotiate_the_neutrality_of_the_internet squeeze
-    mail(to: DEPUTIES_EMAILS, subject: "Deputado, a neutralidade da rede é inegociável")
+    mail(to: DEPUTIES_EMAILS, subject: "Deputado, a neutralidade da rede é inegociável", from: "#{squeeze.first_name} #{squeeze.last_name} <#{squeeze.email}>")
   end
 end
