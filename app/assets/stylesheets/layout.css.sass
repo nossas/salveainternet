@@ -141,6 +141,20 @@ form
 
 .slide-5
   background: asset-url("slide_5_bg.png") center center
+  h2, h3
+    color: white
+  .h2-left
+    +grid-column(7)
+    text-align: right
+  .box-left
+    +grid-column(7)
+    .box
+      text-align: right
+      strong
+        color: white
+  .h3-right
+    +grid-column(5)
+    text-align: left
 
 .slide-6
   background: asset-url("slide_6_bg.png") center center
@@ -167,6 +181,21 @@ form
       text-align: center
     .left-text, .box-right
       +grid-column(12)
+
+  .slide-5
+    .h2-left
+      +grid-column(12)
+      text-align: center
+      margin-bottom: 1em
+    .box-left
+      +grid-column(12)
+      margin-bottom: 1em
+      .box
+        text-align: left
+        font-size: 1em
+    .h3-right
+      +grid-column(12)
+      text-align: center
 
 
 @media (max-width: 750px)
