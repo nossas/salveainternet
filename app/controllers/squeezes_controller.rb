@@ -9,6 +9,6 @@ class SqueezesController < InheritedResources::Base
   end
 
   def permitted_params
-    {:squeeze => params.fetch(:squeeze, {}).permit(:first_name, :last_name, :email)}
+    {:squeeze => params.fetch(:squeeze, {}).permit(:first_name, :last_name, :email, :ip)}
   end
 end
