@@ -161,6 +161,16 @@ form
 
 .slide-7
   background: asset-url("slide_7_bg.png") center center
+  h2, h3
+    color: white
+  .h2-left
+    +grid-column(5)
+    text-align: right
+  .box-right
+    +grid-column(7)
+    margin-top: 9px
+  .wraper
+    margin-top: 2em
 
 .slide-8
   background: asset-url("slide_8_bg.png") center center
@@ -195,6 +205,12 @@ form
         font-size: 1em
     .h3-right
       +grid-column(12)
+      text-align: center
+
+  .slide-7
+    .h2-left, .box-right
+      +grid-column(12)
+    .h2-left
       text-align: center
 
 
