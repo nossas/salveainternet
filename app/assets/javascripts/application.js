@@ -17,6 +17,9 @@
 //= require jquery.facebox
 //= require_tree .
 
+$.facebox.settings.closeImage = 'http://i.imgur.com/k9awT9O.png'
+$.facebox.settings.loadingImage = 'http://i.imgur.com/bFbQqWu.gif'
+
 $(function() {
   $(document).foundation();
 
