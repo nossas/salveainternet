@@ -15,7 +15,6 @@
 //= require foundation
 //= require turbolinks
 //= require jquery.facebox
-//= require jquery.stellar
 //= require_tree .
 
 $.facebox.settings.closeImage = 'http://i.imgur.com/k9awT9O.png'
