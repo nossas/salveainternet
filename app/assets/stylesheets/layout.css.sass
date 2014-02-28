@@ -1,3 +1,9 @@
+a
+  color: $white
+  text-decoration: underline
+  &:hover
+    color: $light_gray
+
 h2, h3
   text-transform: uppercase
   color: $yellow
@@ -51,6 +57,7 @@ form
   +grid-column(12)
   .button
     width: 100%
+    text-transform: uppercase
 
 .first_name_field, .last_name_field, .email_field, .submit_button
   +grid-column(3)
