@@ -52,6 +52,7 @@ gem 'newrelic_rpm'
 gem 'coveralls', require: false
 gem 'fabrication'
 gem 'delayed_job_active_record'
+gem 'selenium-webdriver'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

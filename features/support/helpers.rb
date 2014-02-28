@@ -18,6 +18,9 @@ end
 def to_element string
   return ".share" if string == "the share buttons"
   return "form.new_squeeze" if string == "the squeeze form"
+  return ".first_name_field.error" if string == "the first name field with error"
+  return ".last_name_field.error" if string == "the last name field with error"
+  return ".email_field.error" if string == "the email field with error"
   raise "I don't know '#{string}'"
 end
 
