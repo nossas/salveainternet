@@ -19,3 +19,4 @@ config/database.yml
 *.swo
 01_env_vars.rb
 coverage
+.DS_Store

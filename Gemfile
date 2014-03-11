@@ -54,6 +54,7 @@ gem 'fabrication'
 gem 'delayed_job_active_record'
 gem 'selenium-webdriver'
 gem 'facebox-rails'
+gem 'gibbon'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
