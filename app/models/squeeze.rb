@@ -5,7 +5,7 @@ class Squeeze < ActiveRecord::Base
   after_create { SqueezeMailer.delay.dont_let_them_limit_our_access_to_the_internet(self) }
   after_create { SqueezeMailer.delay.you_cant_negotiate_the_neutrality_of_the_internet(self) }
   after_create { self.delay.add_to_mailchimp_segment }
-  after_validation { self.city = Geocoder.search(self.ip).first.city }
+  after_validation { self.city = Geocoder.search(self.ip).first.try(:city) }
 
   def add_to_mailchimp_segment
     if !Rails.env.test?
