@@ -6,8 +6,14 @@ class Squeeze < ActiveRecord::Base
   after_create { SqueezeMailer.delay.you_cant_negotiate_the_neutrality_of_the_internet(self) }
   after_create { self.delay.add_to_mailchimp_segment }
 
-  after_validation :geocode
-  geocoded_by :ip, city: :city
+  after_validation :geocode, :reverse_geocode
+  geocoded_by :ip
+
+  reverse_geocoded_by :latitude, :longitude do |obj,results|
+    if geo = results.first
+      obj.city    = geo.city
+    end
+  end
 
   def add_to_mailchimp_segment
     if !Rails.env.test?
