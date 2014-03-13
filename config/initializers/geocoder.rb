@@ -6,7 +6,7 @@ else
     :lookup => :yandex,
 
     # IP address geocoding service (see below for supported options):
-    :ip_lookup => :baidu,
+    :ip_lookup => :freegeoip,
 
     # to use an API key:
     # :api_key => "...",
