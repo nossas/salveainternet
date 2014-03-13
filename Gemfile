@@ -55,6 +55,7 @@ gem 'delayed_job_active_record'
 gem 'selenium-webdriver'
 gem 'facebox-rails'
 gem 'gibbon'
+gem 'geocoder'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
