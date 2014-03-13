@@ -11,7 +11,7 @@ class Squeeze < ActiveRecord::Base
 
   reverse_geocoded_by :latitude, :longitude do |obj,results|
     if geo = results.first
-      obj.city    = geo.city
+      obj.city = geo.data["GeoObject"]["metaDataProperty"]["GeocoderMetaData"]["AddressDetails"]["Country"]["AdministrativeArea"]["SubAdministrativeArea"]["SubAdministrativeAreaName"]
     end
   end
 
