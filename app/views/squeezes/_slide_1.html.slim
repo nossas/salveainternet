@@ -38,10 +38,10 @@
             = form.submit "Enviar email", id: 'squeeze-submit-button', class: [:button, :radius]
   .row.email_message
     .wraper
-      = link_to "Quero ver o email que será enviado", "#email", rel: "facebox[.email]"
+      = link_to "Quero ver o email que será enviado", "#email", "data-reveal-id" => "email", "data-reveal" => true
 
-#email
-  p Exmo. Sr. Deputado,
+#email.reveal-modal{data-reveal=true}
+  h2 Exmo. Sr. Deputado,
   p Nos próximos dias, o Sr. participará da votação do chamado Marco Civil da Internet. 
   p Um dos pontos em destaque no texto é a neutralidade da rede, que mantém a Internet como um território livre e democrático.
   p Sabemos que o deputado Eduardo Cunha está liderando um bloco para acabar com a neutralidade da rede e favorecer os interesses das grandes empresas de telecomunicações. Estas empresas querem ter o poder de determinar o que cada um de nós pode ou não pode ver, dependendo de quanto estivermos dispostos a pagar. Isso seria um retrocesso absurdo!
@@ -50,7 +50,7 @@
   p Estamos de olho!
   p Responda publicamente a essa demanda enviando um e-mail para resposta@paneladepressao.org.br
 
-#share
+#share.reveal-modal{data-reveal=true}
   h2 Seu Email foi Enviado!
   p 
     | Uma das belezas da Internet é que é muito fácil espalhar informações usando
@@ -60,4 +60,5 @@
     | Compartilhe esta mobilização
     br
     | com os seus amigos agora!
-  = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{request.url}", class: [:button, :radius, "facebook-share-button"]
+  = link_to "Cadastrar a minha timeline de Facebook ", "/auth/facebook", id: "sign_in", class: :button
+  a class="close-reveal-modal" &#215;

@@ -14,23 +14,13 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
-//= require jquery.facebox
 //= require_tree .
-
-$.facebox.settings.closeImage = 'http://i.imgur.com/k9awT9O.png'
-$.facebox.settings.loadingImage = 'http://i.imgur.com/bFbQqWu.gif'
 
 $(function() {
   $(document).foundation();
 
-  $(document).on('page:change', function() {
-    return $.facebox.settings.inited = false;
-  });  
-
-  $('a[rel*=facebox]').facebox();
-
   if(window.location.hash){
-    $.facebox({div: window.location.hash}, window.location.hash.replace("#", ""));
+    $(window.location.hash).foundation('reveal', 'open');
   }
 
   $(".facebook-share-button").click(function(event){
@@ -88,5 +78,16 @@ $(function() {
     $(".slide-5").css("background-position-x", invertedScrollProgress);
     $(".slide-6").css("background-position", "center " + slide6Position);
     $(".slide-7").css("background-position", "center " + slide7Position);
+  });
+});
+
+$(function(){
+  $('#sign_in').click(function(e) {
+    e.preventDefault();
+    return FB.login(function(response) {
+      if (response.authResponse) {
+        return window.location = '/auth/facebook/callback';
+      }
+    });
   });
 });

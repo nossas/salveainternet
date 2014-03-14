@@ -53,7 +53,6 @@ gem 'coveralls', require: false
 gem 'fabrication'
 gem 'delayed_job_active_record'
 gem 'selenium-webdriver'
-gem 'facebox-rails'
 gem 'gibbon'
 gem 'geocoder'
 gem 'omniauth-facebook'
