@@ -1,12 +1,11 @@
 if Rails.env.production?
   DEPUTIES_EMAILS = [
-    "Vicentinho <dep.vicentinho@camara.leg.br>",
     "Eduardo Cunha <dep.eduardocunha@camara.leg.br>",
     "Eduardo da Fonte <dep.eduardodafonte@camara.leg.br>",
     "Antonio Imbassahy <dep.antonioimbassahy@camara.leg.br>",
     "Moreira Mendes <dep.moreiramendes@camara.leg.br>",
-    "Anthony Garotinho <dep.anthonygarotinho@camara.leg.br>",
     "Mendonça Filho <dep.mendoncafilho@camara.leg.br>",
+    "Bernardo Santana <dep.bernardosantanadevasconcellos@camara.leg.br>",
     "Beto Albuquerque <dep.betoalbuquerque@camara.leg.br>",
     "Fernando Francischini <dep.fernandofrancischini@camara.leg.br>",
     "Vieira da Cunha <dep.vieiradacunha@camara.leg.br>",
