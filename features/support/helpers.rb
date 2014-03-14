@@ -21,6 +21,7 @@ def to_element string
   return ".first_name_field.error" if string == "the first name field with error"
   return ".last_name_field.error" if string == "the last name field with error"
   return ".email_field.error" if string == "the email field with error"
+  return "#compartilhaco" if string == "the compartilhaço reveal"
   raise "I don't know '#{string}'"
 end
 
