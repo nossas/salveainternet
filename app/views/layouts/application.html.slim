@@ -6,6 +6,7 @@ html
     meta name="og:title" content="Se você acha que a Internet deve ser livre e democrática, cuidado."
     meta name="og:image" content=image_url("facebook_share.jpg")
     meta name="og:description" content="Neste exato momento, o deputado Eduardo Cunha está batalhando para mudar as regras do jogo."
+    meta property="fb:app_id" content=ENV["FACEBOOK_KEY"]
     title= content_for?(:title) ? yield(:title) : "Salve a Internet!"
     = favicon_link_tag 'favicon.png'
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
