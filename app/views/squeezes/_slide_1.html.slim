@@ -40,8 +40,8 @@
     .wraper
       = link_to "Quero ver o email que será enviado", "#email", "data-reveal-id" => "email", "data-reveal" => true
 
-#email.reveal-modal{data-reveal=true}
-  h2 Exmo. Sr. Deputado,
+#email.medium.reveal-modal{data-reveal=true}
+  p.lead Exmo. Sr. Deputado,
   p Nos próximos dias, o Sr. participará da votação do chamado Marco Civil da Internet. 
   p Um dos pontos em destaque no texto é a neutralidade da rede, que mantém a Internet como um território livre e democrático.
   p Sabemos que o deputado Eduardo Cunha está liderando um bloco para acabar com a neutralidade da rede e favorecer os interesses das grandes empresas de telecomunicações. Estas empresas querem ter o poder de determinar o que cada um de nós pode ou não pode ver, dependendo de quanto estivermos dispostos a pagar. Isso seria um retrocesso absurdo!
@@ -63,7 +63,15 @@
       .lead O voto que define o futuro da Internet será em 4 horas. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?
 
 #share.medium.reveal-modal{data-reveal=true}
-  p Obrigado por cadastrar sua timeline e participar do Compartilhaço pela neutralidade da rede.
-  p Agora, espalhe a mobilização para seus amigos: quantos mais pessoas se unirem, maior será a pressão nos deputados!
-  = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{request.url}", class: [:button, :radius, :large, "facebook-share-button"]
-  a class="close-reveal-modal" &#215;
+  p.lead Obrigado por cadastrar sua timeline e participar do Compartilhaço pela neutralidade da rede.
+  p 
+    | Agora, espalhe a mobilização para seus amigos:
+    br
+    | quantos mais pessoas se unirem, maior será a pressão nos deputados!
+  = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url(anchor: "compartilhaco"))}", class: [:button, :radius, :large, "facebook-share-button"]
+  .post
+    .image= image_tag "compartilhaco.jpg"
+    .text
+      .header Ele foi presidente da Telerj durante o governo Collor, controla 7 rádios, e é parte em 22 processos no Supremo. Agora, ele está ajudando as teles a acabar com a sua liberdade na Internet.
+      .link= root_url
+      .lead O voto que define o futuro da Internet será em 4 horas. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?

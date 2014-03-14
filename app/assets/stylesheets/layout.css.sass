@@ -14,8 +14,41 @@ p
   font-size: 1.2em
 
 .reveal-modal
+  text-align: center
+  background: $yellow
+  p
+    font-size: 1em
+    color: black
+  p.lead
+    color: lighten($yellow, 45%)
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 1.5em
   .close-reveal-modal
     text-decoration: none
+  .post
+    text-align: left
+    overflow: hidden
+    margin-top: 2em
+    background: #f7f7f7
+    .image
+      float: left
+      margin-right: 1em
+      width: 210px
+      img
+        float: left
+        margin: 0
+    .text
+      padding: 1em
+      .header
+        color: #3b5998
+        margin-bottom: .5em
+        font-weight: bold
+      .link
+        color: $gray
+        margin-bottom: 1em
+      .lead
+        color: $gray
 
 .wraper
   text-align: center
@@ -102,47 +135,18 @@ form
   padding-top: 1em
 
 #compartilhaco
-  text-align: center
-  background: $yellow
-  p
-    color: black
-    font-size: 1em
-  p.lead
-    color: lighten($yellow, 45%)
-    font-weight: bold
-    text-transform: uppercase
-    font-size: 1.5em
   .button
     margin: 0
     background: $facebook_blue
-  .post
-    text-align: left
-    overflow: hidden
-    margin-top: 2em
-    background: #f7f7f7
-    .image
-      float: left
-      margin-right: 1em
-      width: 210px
-      img
-        float: left
-        margin: 0
-    .text
-      padding: 1em
-      .header
-        color: #3b5998
-        margin-bottom: .5em
-        font-weight: bold
-      .link
-        color: $gray
-        margin-bottom: 1em
-      .lead
-        color: $gray
 
 #share
   text-align: center
   .button
     margin: 0
+    background: $facebook_blue
+
+#email
+  text-align: left
 
 .slide-2
   background: asset-url("slide_2_bg.png") top center
