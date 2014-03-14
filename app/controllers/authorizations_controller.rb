@@ -2,6 +2,6 @@ class AuthorizationsController < ApplicationController
   def create
     authorization = Authorization.from_omniauth(env["omniauth.auth"])
     session[:authorization_id] = authorization.id
-    redirect_to root_url
+    redirect_to root_url(anchor: "share")
   end
 end
