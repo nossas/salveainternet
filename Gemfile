@@ -56,6 +56,7 @@ gem 'selenium-webdriver'
 gem 'gibbon'
 gem 'geocoder'
 gem 'omniauth-facebook'
+gem "koala", "~> 1.8.0rc1"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
