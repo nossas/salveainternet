@@ -56,6 +56,7 @@ gem 'selenium-webdriver'
 gem 'facebox-rails'
 gem 'gibbon'
 gem 'geocoder'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
