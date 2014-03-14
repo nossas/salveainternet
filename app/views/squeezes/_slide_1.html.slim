@@ -51,18 +51,16 @@
   p Responda publicamente a essa demanda enviando um e-mail para resposta@paneladepressao.org.br
 
 #compartilhaco.medium.reveal-modal{data-reveal=true}
-  p
-    strong Participe do compartilhaço pela internet livre!
+  p.lead Participe do compartilhaço pela internet livre!
   p Cadastre agora sua timeline de Facebook para realizar a postagem abaixo no dia do voto, às 10h da manhã. Se milhares de pessoas cadastrarem suas timelines para fazer a publicação ao mesmo tempo, o impacto do post será muito maior, já que o Facebook dará maior relevância e alcance às nossas vozes.
   p A caixa de emails dos deputados vai estourar de mensagens dos cidadãos poucas horas antes do voto, mostrando que quem mexer com a neutralidade da rede vai comprar uma briga com a sociedade inteira em ano de eleição!
+  = link_to "Cadastrar a minha timeline de Facebook ", "/auth/facebook", id: "sign_in", class: [:button, :large, :radius]
   .post
     .image= image_tag "compartilhaco.jpg"
     .text
       .header Ele foi presidente da Telerj durante o governo Collor, controla 7 rádios, e é parte em 22 processos no Supremo. Agora, ele está ajudando as teles a acabar com a sua liberdade na Internet.
       .link= root_url
       .lead O voto que define o futuro da Internet será em 4 horas. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?
-  = link_to "Cadastrar a minha timeline de Facebook ", "/auth/facebook", id: "sign_in", class: [:button, :large]
-  a class="close-reveal-modal" &#215;
 
 #share.medium.reveal-modal{data-reveal=true}
   p Obrigado por cadastrar sua timeline e participar do Compartilhaço pela neutralidade da rede.

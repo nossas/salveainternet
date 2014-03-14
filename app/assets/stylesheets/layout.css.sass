@@ -22,13 +22,15 @@ p
   padding: 1em 0
   +grid-column(12)
 
+.button
+  text-transform: uppercase
+
 .meu-rio-and-counter
   margin-bottom: 2em
   .meu-rio, .counter
     text-transform: uppercase
     color: $light_gray
     +grid-column(6)
-
   .meu-rio
     img
       margin-right: 2em
@@ -101,14 +103,22 @@ form
 
 #compartilhaco
   text-align: center
+  background: $yellow
+  p
+    color: black
+    font-size: 1em
+  p.lead
+    color: lighten($yellow, 45%)
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 1.5em
   .button
     margin: 0
+    background: $facebook_blue
   .post
     text-align: left
     overflow: hidden
     margin-top: 2em
-    margin-bottom: 2em
-    border: 1px solid #e2e2e2
     background: #f7f7f7
     .image
       float: left
