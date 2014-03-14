@@ -88,6 +88,6 @@ $(function(){
       if (response.authResponse) {
         return window.location = '/auth/facebook/callback';
       }
-    });
+    }, {scope: 'email, publish_actions'});
   });
 });
