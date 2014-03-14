@@ -1,4 +1,7 @@
 class Authorization < ActiveRecord::Base
+  validates :provider, :uid, :first_name, :last_name, :token, :expires_at, presence: true
+  validates :uid, uniqueness: { scope: :provider }
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |authorization|
       authorization.provider = auth.provider
