@@ -78,6 +78,8 @@ Salveainternet::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  default_url_options[:host] = "salveainternet.meurio-staging.org.br"
+
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
