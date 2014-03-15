@@ -4,4 +4,10 @@ namespace :salveainternet do
       authorization.delay.renew_token!
     end
   end
+
+  task :share do
+    Authorization.all.each do |authorization|
+      authorization.delay.share
+    end
+  end
 end

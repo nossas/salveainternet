@@ -9,6 +9,11 @@ class Authorization < ActiveRecord::Base
     self.save
   end
 
+  def share
+    api = Koala::Facebook::API.new(self.token)
+    api.put_wall_post(nil, link: root_url(anchor: "compartilhaco"))
+  end
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |authorization|
       authorization.provider = auth.provider
