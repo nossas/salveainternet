@@ -2,6 +2,13 @@ class Authorization < ActiveRecord::Base
   validates :provider, :uid, :first_name, :last_name, :token, :expires_at, presence: true
   validates :uid, uniqueness: { scope: :provider }
 
+  def renew_token!
+    new_token = Koala::Facebook::OAuth.new(ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"]).exchange_access_token_info(self.token)
+    self.token = new_token['access_token']
+    self.expires_at = Time.now + new_token['expires'].to_i.seconds
+    self.save
+  end
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |authorization|
       authorization.provider = auth.provider
