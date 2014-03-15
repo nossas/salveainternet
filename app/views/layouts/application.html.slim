@@ -6,6 +6,7 @@ html
     meta property="og:title" content="Ele foi presidente da Telerj durante o governo Collor, controla 7 rádios, e é parte em 22 processos no Supremo. Agora, ele está ajudando as teles a acabar com a sua liberdade na Internet."
     meta property="og:image" content=image_url("compartilhaco.jpg")
     meta property="og:description" content="O voto que define o futuro da Internet será em 4 horas. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?"
+    meta property="og:url" content=request.url
     meta property="fb:app_id" content=ENV["FACEBOOK_KEY"]
     title= content_for?(:title) ? yield(:title) : "Salve a Internet!"
     = favicon_link_tag 'favicon.png'
