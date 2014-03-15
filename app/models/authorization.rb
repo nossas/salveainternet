@@ -1,4 +1,6 @@
 class Authorization < ActiveRecord::Base
+  include Rails.application.routes.url_helpers
+
   validates :provider, :uid, :first_name, :last_name, :token, :expires_at, presence: true
   validates :uid, uniqueness: { scope: :provider }
 
