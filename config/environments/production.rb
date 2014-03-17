@@ -79,6 +79,8 @@ Salveainternet::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   GA.tracker = "UA-26278513-20"
+  
+  default_url_options[:host] = "salveainternet.meurio.org.br"
 
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
