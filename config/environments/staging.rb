@@ -79,7 +79,6 @@ Salveainternet::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   default_url_options[:host] = "salveainternet.meurio-staging.org.br"
-  config.asset_host = "http://salveainternet.meurio-staging.org.br"
 
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
