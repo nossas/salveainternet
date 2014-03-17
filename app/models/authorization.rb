@@ -17,7 +17,7 @@ class Authorization < ActiveRecord::Base
     api.put_wall_post(
       nil, 
       link: root_url(anchor: "compartilhaco"),
-      name: "Réu em 4 processos no STF, aliado das teles e inimigo da internet",
+      name: "Réu em 3 processos no STF, aliado das teles e inimigo da internet",
       description: "O voto que define o futuro da Internet será em 4 horas. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?",
       picture: "http://i.imgur.com/H4v4xr9.jpg"
     )
