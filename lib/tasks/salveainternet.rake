@@ -8,7 +8,7 @@ namespace :salveainternet do
   task :share do
     Authorization.all.each do |authorization|
       puts authorization.inspect
-      authorization.delay.share
+      authorization.share
     end
   end
 end
