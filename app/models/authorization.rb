@@ -6,10 +6,17 @@ class Authorization < ActiveRecord::Base
   validates :uid, uniqueness: { scope: :provider }
 
   def renew_token!
-    new_token = Koala::Facebook::OAuth.new(ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"]).exchange_access_token_info(self.token)
-    self.token = new_token['access_token']
-    self.expires_at = Time.now + new_token['expires'].to_i.seconds
-    self.save
+    begin
+      new_token = Koala::Facebook::OAuth.new(ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"]).exchange_access_token_info(self.token)
+      self.token = new_token['access_token']
+      self.expires_at = Time.now + new_token['expires'].to_i.seconds
+      self.last_token_renew = true
+      self.save
+    rescue Exception => e
+      logger.error "Could not renew token for authorization id #{self.id}"
+      self.last_token_renew = false
+      self.save
+    end
   end
 
   def share
