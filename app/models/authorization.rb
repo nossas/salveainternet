@@ -22,10 +22,10 @@ class Authorization < ActiveRecord::Base
   def share
     api = Koala::Facebook::API.new(self.token)
     post = api.put_wall_post(
-      nil, 
-      link: root_url,
-      name: "Réu em 3 processos no STF, aliado das teles e inimigo da internet",
-      description: "O voto que define o futuro da Internet será em 4 horas. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?",
+      I18n.t("squeeze.new.compartilhaco.post.message"), 
+      link: "http://bit.ly/salveainternet",
+      name: I18n.t("squeeze.new.compartilhaco.post.header"),
+      description: I18n.t("squeeze.new.compartilhaco.post.lead"),
       picture: "http://i.imgur.com/H4v4xr9.jpg"
     )
     self.update_attribute :facebook_post_id, post["id"]

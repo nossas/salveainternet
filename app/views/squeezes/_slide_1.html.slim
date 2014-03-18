@@ -58,11 +58,12 @@
   = link_to "Cadastrar a minha timeline de Facebook ", "/auth/facebook", id: "sign_in", class: [:button, :large, :radius]
   p Veja abaixo a mensagem que você compartilhará na quarta-feira:
   .post
+    p= t("squeeze.new.compartilhaco.post.message")
     .image= image_tag "http://i.imgur.com/H4v4xr9.jpg"
     .text
-      .header Réu em 3 processos no STF, aliado das teles e inimigo da internet
-      .link= root_url
-      .lead O voto que define o futuro da Internet será em 4 horas. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?
+      .header= t("squeeze.new.compartilhaco.post.header")
+      .link http://bit.ly/salveainternet
+      .lead= t("squeeze.new.compartilhaco.post.lead")
   a class="close-reveal-modal" &#215;
 
 #share.medium.reveal-modal{data-reveal=true}
