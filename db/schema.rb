@@ -11,21 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140314152452) do
+ActiveRecord::Schema.define(version: 20140318115211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "authorizations", force: true do |t|
-    t.string   "provider",   null: false
-    t.string   "uid",        null: false
-    t.string   "first_name", null: false
-    t.string   "last_name",  null: false
-    t.string   "token",      null: false
-    t.datetime "expires_at", null: false
+    t.string   "provider",         null: false
+    t.string   "uid",              null: false
+    t.string   "first_name",       null: false
+    t.string   "last_name",        null: false
+    t.string   "token",            null: false
+    t.datetime "expires_at",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
+    t.string   "facebook_post_id"
   end
 
   create_table "delayed_jobs", force: true do |t|
