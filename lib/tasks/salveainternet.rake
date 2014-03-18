@@ -5,7 +5,7 @@ namespace :salveainternet do
     end
   end
 
-  task :share do
+  task :share => :environment do
     Authorization.all.each do |authorization|
       puts authorization.inspect
       authorization.share
