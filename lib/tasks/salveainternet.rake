@@ -10,7 +10,7 @@ namespace :salveainternet do
       puts authorization.inspect
       begin
         authorization.share
-      rescue e
+      rescue Exception => e
         puts e.message
       end
     end
