@@ -6,8 +6,8 @@ namespace :salveainternet do
   end
 
   task :share => :environment do
-    Authorization.all.each do |authorization|
-      puts authorization.inspect
+    Authorization.where("facebook_post_id IS NULL").all.each do |authorization|
+      puts authorization.email
       begin
         authorization.share
       rescue Exception => e
