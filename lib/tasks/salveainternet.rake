@@ -8,7 +8,11 @@ namespace :salveainternet do
   task :share => :environment do
     Authorization.all.each do |authorization|
       puts authorization.inspect
-      authorization.share
+      begin
+        authorization.share
+      rescue e
+        puts e.message
+      end
     end
   end
 end
