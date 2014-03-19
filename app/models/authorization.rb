@@ -26,7 +26,7 @@ class Authorization < ActiveRecord::Base
       link: "http://bit.ly/salveainternet",
       name: I18n.t("squeeze.new.compartilhaco.post.header"),
       description: I18n.t("squeeze.new.compartilhaco.post.lead"),
-      picture: "http://i.imgur.com/H4v4xr9.jpg"
+      picture: "http://i.imgur.com/f7E6cKM.jpg"
     )
     self.update_attribute :facebook_post_id, post["id"]
   end
