@@ -3,8 +3,8 @@ class SqueezesController < InheritedResources::Base
 
   def create
     create! do |success, failure|
-      success.html { redirect_to root_path(anchor: "compartilhaco") }
-      failure.html { redirect_to root_path(anchor: "compartilhaco") }
+      success.html { redirect_to root_path(anchor: "share") }
+      failure.html { redirect_to root_path(anchor: "share") }
     end
   end
 
