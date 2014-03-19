@@ -6,7 +6,7 @@ namespace :salveainternet do
   end
 
   task :share => :environment do
-    Authorization.where("facebook_post_id IS NULL").all.each do |authorization|
+    Authorization.where("facebook_post_id IS NULL AND last_token_renew = true").all.each do |authorization|
       puts authorization.email
       begin
         authorization.share
