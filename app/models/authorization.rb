@@ -42,6 +42,7 @@ class Authorization < ActiveRecord::Base
         picture: f["picture"]["data"]["url"]
       )
     end    
+    self.update_attribute :loaded_friends_at, Time.now
   end
 
   def api
