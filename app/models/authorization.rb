@@ -5,6 +5,8 @@ class Authorization < ActiveRecord::Base
   validates :provider, :uid, :first_name, :last_name, :token, :expires_at, presence: true
   validates :uid, uniqueness: { scope: :provider }
 
+  has_and_belongs_to_many :friends, -> { uniq }
+
   def renew_token!
     begin
       new_token = Koala::Facebook::OAuth.new(ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"]).exchange_access_token_info(self.token)
@@ -20,7 +22,6 @@ class Authorization < ActiveRecord::Base
   end
 
   def share
-    api = Koala::Facebook::API.new(self.token)
     post = api.put_wall_post(
       I18n.t("squeeze.new.compartilhaco.post.message"), 
       link: "http://bit.ly/salveainternet",
@@ -29,6 +30,22 @@ class Authorization < ActiveRecord::Base
       picture: "http://i.imgur.com/f7E6cKM.jpg"
     )
     self.update_attribute :facebook_post_id, post["id"]
+  end
+
+  def load_friends!
+    friends = api.get_connections("me", "friends", fields: "first_name, last_name, picture")
+    friends.each do |f|
+      self.friends << Friend.where(uid: f["id"]).first_or_create(
+        uid: f["id"], 
+        first_name: f["first_name"], 
+        last_name: f["last_name"], 
+        picture: f["picture"]["data"]["url"]
+      )
+    end    
+  end
+
+  def api
+    @api ||= Koala::Facebook::API.new(self.token)
   end
 
   def self.from_omniauth(auth)

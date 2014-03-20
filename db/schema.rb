@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318135523) do
+ActiveRecord::Schema.define(version: 20140320172550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,24 @@ ActiveRecord::Schema.define(version: 20140318135523) do
     t.string   "email"
     t.string   "facebook_post_id"
     t.boolean  "last_token_renew"
+  end
+
+  create_table "friends", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "uid"
+    t.string   "picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "authorizations_friends", force: true do |t|
+    t.integer "authorization_id"
+    t.integer "friend_id"
+    t.index ["authorization_id"], :name => "fk__authorizations_friends_authorization_id", :order => {"authorization_id" => :asc}
+    t.index ["friend_id"], :name => "fk__authorizations_friends_friend_id", :order => {"friend_id" => :asc}
+    t.foreign_key ["authorization_id"], "authorizations", ["id"], :on_update => :no_action, :on_delete => :no_action, :name => "fk_authorizations_friends_authorization_id"
+    t.foreign_key ["friend_id"], "friends", ["id"], :on_update => :no_action, :on_delete => :no_action, :name => "fk_authorizations_friends_friend_id"
   end
 
   create_table "delayed_jobs", force: true do |t|
