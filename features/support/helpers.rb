@@ -30,7 +30,7 @@ end
 
 def to_subject string
   return "Não deixe o deputado Eduardo Cunha limitar nosso acesso à internet" if string == "don't let them limit our access to the Internet"
-  return "Deputado, a neutralidade da rede é inegociável" if string == "you can't negotiate the neutrality of the Internet"
+  return "Deputado, mantenha o artigo 20 do Marco Civil!" if string == "you can't negotiate the neutrality of the Internet"
   raise "I don't know '#{string}'"
 end
 
