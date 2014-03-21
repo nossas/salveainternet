@@ -3,14 +3,14 @@ a
   text-decoration: underline
   font-weight: bold
   &:hover
-    color: $light_gray
+    color: $light-gray
 
 h2, h3
   text-transform: uppercase
   color: $yellow
 
 p
-  color: $light_gray
+  color: $light-gray
   font-size: 1.2em
 
 .reveal-modal
@@ -19,7 +19,6 @@ p
   .close-reveal-modal
     color: black
   p
-    font-size: 1em
     color: black
   p.lead
     color: lighten($yellow, 45%)
@@ -28,29 +27,21 @@ p
     font-size: 1.5em
   .close-reveal-modal
     text-decoration: none
-  .post
-    padding: 1em
-    text-align: left
-    overflow: hidden
-    background: #f7f7f7
-    .image
-      float: left
-      margin-right: 1em
-      width: 210px
-      img
-        float: left
-        margin: 0
-    .text
-      padding: 1em
-      .header
-        color: #3b5998
-        margin-bottom: .5em
-        font-weight: bold
-      .link
-        color: $gray
-        margin-bottom: 1em
-      .lead
-        color: $gray
+  .facebook, .twitter
+    +grid-column(6)
+    #facebook-account-registration-button, #twitter-account-registration-button, #twitter-account-registration-button-disabled, #facebook-account-registration-button-disabled
+      margin-bottom: 1em
+    #facebook-account-registration-button, #twitter-account-registration-button
+      display: block
+      +opacity(.9)
+      &:hover
+        +opacity(1)
+  .text
+    +grid-column(12)
+  #twitter-share-button
+    background: $twitter-blue
+  #facebook-share-button
+    background: $facebook-blue
 
 .wraper
   text-align: center
@@ -59,12 +50,13 @@ p
 
 .button
   text-transform: uppercase
+  font-weight: 900
 
 .meu-rio-and-counter
   margin-bottom: 2em
   .meu-rio, .counter
     text-transform: uppercase
-    color: $light_gray
+    color: $light-gray
     +grid-column(6)
   .meu-rio
     img
@@ -118,7 +110,7 @@ form
   +grid-column(5)
 
 .box
-  background: $dark_gray
+  background: $dark-gray
   color: $yellow
   text-align: left
   padding: 1.5em
@@ -136,16 +128,11 @@ form
   background: asset-url("slide_1_bg.png") center top
   padding-top: 1em
 
-#compartilhaco
-  .button
-    margin-bottom: 1em
-    background: $facebook_blue
-
 #share
   text-align: center
   .button
     margin: 0
-    background: $facebook_blue
+    background: $facebook-blue
 
 #email
   text-align: left
