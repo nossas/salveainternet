@@ -21,3 +21,7 @@ end
 Then(/^I should not see "(.*?)"$/) do |arg1|
   expect(page).to_not have_css(to_element(arg1))
 end
+
+When(/^I click "(.*?)"$/) do |arg1|
+  click_on to_link(arg1)
+end
