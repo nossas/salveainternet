@@ -24,6 +24,7 @@ def to_element string
   return ".email_field.error" if string == "the email field with error"
   return "#compartilhaco" if string == "the compartilhaço reveal"
   return "#twitter-share-button" if string == "the Twitter share button"
+  return "#facebook-share-button" if string == "the Facebook share button"
   raise "I don't know '#{string}'"
 end
 
@@ -35,5 +36,6 @@ end
 
 def to_link string
   return "twitter-account-registration-button" if string == "the Twitter account registration button"
+  return "facebook-account-registration-button" if string == "the Facebook account registration button"
   raise "I don't know '#{string}'"
 end

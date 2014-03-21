@@ -58,10 +58,21 @@
       p.lead Participe do compartilhaço pela internet livre!
       p Cadastre agora sua timeline de Facebook para realizar a postagem abaixo na quarta, 19/03, dia previsto para o voto, às 10h da manhã. Se milhares de pessoas cadastrarem suas timelines para fazer a publicação ao mesmo tempo, o Facebook dará maior relevância e alcance às nossas vozes!
       p O post abaixo leva para a página que permite o envio de emails pedindo que a neutralidade da rede seja mantida no texto do Marco Civil. Com o compartilhaço, a caixa de emails dos deputados vai estourar de mensagens dos cidadãos poucas horas antes do voto!
+
   .row
     .facebook
-      = link_to image_tag("facebook-account-registration-button.png"), "/auth/facebook", id: "facebook-account-registration-button"
-      = image_tag("facebook-preview.jpg")
+      - if session[:facebook_authorization_id].present?
+        = image_tag("facebook-account-registration-button-disabled.png", id: "facebook-account-registration-button-disabled")
+        p
+          strong
+            | Compartilhe esta mobilização
+            br
+            | com os seus amigos agora!
+        = link_to "Compartilhe", "", id: "facebook-share-button", class: [:button, :large, :radius]
+      - else
+        = link_to image_tag("facebook-account-registration-button.png"), "/auth/facebook", id: "facebook-account-registration-button"
+        = image_tag("facebook-preview.jpg")
+
     .twitter
       - if session[:twitter_authorization_id].present?
         = image_tag("twitter-account-registration-button-disabled.png", id: "twitter-account-registration-button-disabled")
