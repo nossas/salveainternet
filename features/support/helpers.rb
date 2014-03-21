@@ -1,5 +1,6 @@
 def to_url string
   return root_path if string == "the homepage"
+  return root_path(anchor: "compartilhaco") if string == "the register page"
   raise "I don't know '#{string}'"
 end
 
@@ -22,11 +23,17 @@ def to_element string
   return ".last_name_field.error" if string == "the last name field with error"
   return ".email_field.error" if string == "the email field with error"
   return "#compartilhaco" if string == "the compartilhaço reveal"
+  return "#twitter-share-button" if string == "the Twitter share button"
   raise "I don't know '#{string}'"
 end
 
 def to_subject string
   return "Não deixe o deputado Eduardo Cunha limitar nosso acesso à internet" if string == "don't let them limit our access to the Internet"
   return "Deputado, a neutralidade da rede é inegociável" if string == "you can't negotiate the neutrality of the Internet"
+  raise "I don't know '#{string}'"
+end
+
+def to_link string
+  return "twitter-account-registration-button" if string == "the Twitter account registration button"
   raise "I don't know '#{string}'"
 end
