@@ -46,15 +46,25 @@ p
     background: white
     overflow: hidden
     border-bottom: 3px solid $facebook-blue
-    img
-      width: 181px
+    .image
+      overflow: hidden
+      width: 120px
       float: left
-    .title
-      padding: 20px
-      padding-left: 181px + 20px
+      img
+        max-width: 224px
+    .info
+      padding: 10px
+      padding-left: 120px + 10px
       text-align: left
-      color: $facebook-blue
-      font-weight: bold
+      .title
+        color: $facebook-blue
+        font-weight: bold
+      .title, .link
+        margin-bottom: 5px
+      .title, .link, .lead
+        font-size: .8em
+      .link, .lead
+        color: $gray
   .tweet
     background: white
     padding: 20px
