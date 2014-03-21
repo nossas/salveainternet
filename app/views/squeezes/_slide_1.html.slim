@@ -64,6 +64,10 @@
       .header= t("squeeze.new.compartilhaco.post.header")
       .link http://bit.ly/salveainternet
       .lead= t("squeeze.new.compartilhaco.post.lead")
+  - if session[:twitter_authorization_id].present?
+    = link_to "Compartilhe", "", id: "twitter-share-button", class: [:button, :large, :radius]
+  - else
+    = link_to "Cadastrar a minha timeline do Twitter", "/auth/twitter", id: "twitter-account-registration-button", class: [:button, :large, :radius]
   a class="close-reveal-modal" &#215;
 
 #share.medium.reveal-modal{data-reveal=true}
