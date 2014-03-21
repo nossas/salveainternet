@@ -3,7 +3,8 @@ Salveainternet::Application.routes.draw do
 
   resources :squeezes, only: [:new, :create]
 
-  match 'auth/:provider/callback', to: 'authorizations#create', via: [:get, :post]
+  match 'auth/facebook/callback', to: 'authorizations#create', via: [:get, :post]
+  match 'auth/twitter/callback', to: 'twitter_authorizations#create', via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
