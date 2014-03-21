@@ -58,6 +58,7 @@ class Authorization < ActiveRecord::Base
       authorization.email = auth.info.email
       authorization.token = auth.credentials.token
       authorization.expires_at = Time.at(auth.credentials.expires_at)
+      authorization.facebook_post_id = nil
       authorization.save!
     end
   end
