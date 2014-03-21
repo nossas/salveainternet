@@ -3,6 +3,8 @@ en:
     facebook:
       title: "Se você acha que a Internet deve ser livre e democrática, cuidado."
       description: "Neste exato momento, o deputado Eduardo Cunha está batalhando para mudar as regras do jogo."
+    twitter:
+      text: "Neste exato momento, o deputado Eduardo Cunha está batalhando para mudar as regras do jogo"
   squeeze:
     # Homepage
     new:

@@ -68,7 +68,7 @@
             | Compartilhe esta mobilização
             br
             | com os seus amigos agora!
-        = link_to "Compartilhe", "", id: "facebook-share-button", class: [:button, :large, :radius]
+        = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url(anchor: "compartilhaco"))}", id: "facebook-share-button", class: [:button, :large, :radius, "facebook-share-button"]
       - else
         = link_to image_tag("facebook-account-registration-button.png"), "/auth/facebook", id: "facebook-account-registration-button"
         = image_tag("facebook-preview.jpg")
@@ -81,7 +81,7 @@
             | Compartilhe esta mobilização
             br
             | com os seus amigos agora!
-        = link_to "Tweet", "", id: "twitter-share-button", class: [:button, :large, :radius]
+        = link_to "Tweet", "https://twitter.com/share?url=#{URI::encode(root_url(anchor: "compartilhaco"))}&text=#{URI::encode(t("share.twitter.text"))}&hashtags=salveainternet", id: "twitter-share-button", class: [:button, :large, :radius, "twitter-share-button"]
       - else
         = link_to image_tag("twitter-account-registration-button.png"), "/auth/twitter", id: "twitter-account-registration-button"
         = image_tag("twitter-preview.jpg")

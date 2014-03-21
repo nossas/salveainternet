@@ -32,6 +32,15 @@ $(function() {
     return false;
   });
 
+  $(".twitter-share-button").click(function(event){
+    window.open(
+      $(event.target).attr("href"), 
+      'twitter-share-dialog', 
+      'width=626,height=436'
+    ); 
+    return false;
+  });
+
   new_squeeze_y = $(".new_squeeze").position().top
   $(window).scroll(function(){
     if(window.scrollY >= new_squeeze_y){
