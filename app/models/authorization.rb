@@ -21,13 +21,13 @@ class Authorization < ActiveRecord::Base
     end
   end
 
-  def share
+  def share picture_url
     post = api.put_wall_post(
-      I18n.t("squeeze.new.compartilhaco.post.message"), 
+      I18n.t("compartilhaco.facebook.message"), 
       link: "http://bit.ly/salveainternet",
-      name: I18n.t("squeeze.new.compartilhaco.post.header"),
-      description: I18n.t("squeeze.new.compartilhaco.post.lead"),
-      picture: "http://i.imgur.com/f7E6cKM.jpg"
+      name: I18n.t("compartilhaco.facebook.header"),
+      description: I18n.t("compartilhaco.facebook.lead"),
+      picture: picture_url
     )
     self.update_attribute :facebook_post_id, post["id"]
   end

@@ -55,9 +55,10 @@
   a class="close-reveal-modal" &#215;
   .row
     .text
-      p.lead Participe do compartilhaço pela internet livre!
-      p Cadastre agora sua timeline de Facebook para realizar a postagem abaixo na quarta, 19/03, dia previsto para o voto, às 10h da manhã. Se milhares de pessoas cadastrarem suas timelines para fazer a publicação ao mesmo tempo, o Facebook dará maior relevância e alcance às nossas vozes!
-      p O post abaixo leva para a página que permite o envio de emails pedindo que a neutralidade da rede seja mantida no texto do Marco Civil. Com o compartilhaço, a caixa de emails dos deputados vai estourar de mensagens dos cidadãos poucas horas antes do voto!
+      p.lead Participe do compartilhaço e tuitaço pelo Marco Civil!
+      p Na terça-feira, dia 25/03, às 10h da manhã, a internet brasileira vai se unir para dizer à Câmara dos Deputados que não aceita a barganha de nossos direitos: neutralidade da rede, liberdade de expressão e privacidade dos usuários são inegociáveis!
+      p Se milhares de pessoas cadastrarem suas timelines de Facebook e Twitter para fazer a publicação ao mesmo tempo, o impacto das nossas vozes será muito maior e ecoará em alto e bom som nos corredores do Congresso.
+      p Juntos, vamos mostrar para os deputados que quem mexer com a neutralidade da rede, e com nossa liberdade de expressão e privacidade vai comprar uma briga com a sociedade inteira em ano de eleição!
 
   .row
     .facebook
@@ -88,8 +89,8 @@
         = link_to image_tag("twitter-account-registration-button.png"), "/auth/twitter", id: "twitter-account-registration-button"
         .tweet
           span @seunome 
-          = t("share.twitter.text")
-          span  #salveainternet
+          = t("compartilhaco.twitter.message_#{rand(5) + 1}")
+        small * a hashtag a ser usada só será revelada no dia para evitar usos indevidos
 
 #share.medium.reveal-modal{data-reveal=true}
   p.lead Uma das belezas da Internet é que é muito fácil espalhar informações usando as suas redes. E agora é a hora de usar a internet para salvar a internet!

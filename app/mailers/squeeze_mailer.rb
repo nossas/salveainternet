@@ -9,6 +9,6 @@ class SqueezeMailer < ActionMailer::Base
 
   def you_cant_negotiate_the_neutrality_of_the_internet squeeze
     headers "X-SMTPAPI" => "{ \"category\": [\"salveainternet\", \"you_cant_negotiate_the_neutrality_of_the_internet\"] }"
-    mail(to: DEPUTIES_EMAILS, subject: "Deputado, a neutralidade da rede é inegociável", from: "#{squeeze.first_name} #{squeeze.last_name} <#{squeeze.email}>")
+    mail(to: DEPUTIES_EMAILS, subject: "Deputado, mantenha o artigo 20 do Marco Civil!", from: "#{squeeze.first_name} #{squeeze.last_name} <#{squeeze.email}>")
   end
 end

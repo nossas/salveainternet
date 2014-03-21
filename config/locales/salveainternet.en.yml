@@ -1,15 +1,20 @@
 en:
   share:
     facebook:
-      title: "Se você acha que a Internet deve ser livre e democrática, cuidado."
-      description: "Neste exato momento, o deputado Eduardo Cunha está batalhando para mudar as regras do jogo."
+      title: "Após a neutralidade, agora querem atacar a liberdade de expressão."
+      description: "Na terça-feira, a internet brasileira vai unir as forças para fazer os maiores compartilhaços e tuitaços da história."
     twitter:
-      text: "Neste exato momento, o deputado Eduardo Cunha está batalhando para mudar as regras do jogo"
-  squeeze:
-    # Homepage
-    new:
-      compartilhaco:
-        post:
-          message: "A qualquer momento, os deputados poderão decidir se a nossa Internet será livre ou dominada pelos interesses das empresas de telecomunicação. Clique no link para mandar um email a eles e mostrar que quem trabalhar contra a neutralidade da Internet estará comprando briga com a sociedade em ano de eleição. #salveainternet"
-          header: "Réu em 3 processos no STF, aliado das teles e inimigo da internet"
-          lead: "O voto que define o futuro da Internet será nos próximos dias. Você vai deixar o Eduardo Cunha ganhar sem dizer nada?"
+      text: "Participe: Tuitaço 3ªfeira 25mar14 entre 12h/14h pela votação do Marco Civil. A hashtag será revelada no dia!"
+  compartilhaco:
+    facebook:
+      message: "O presidente da Câmara garantiu que a votação do Marco Civil acontecerá hoje. Temos poucas horas para defender que os pontos cruciais do projeto, como neutralidade da rede e liberdade de expressão, sejam mantidos. #salveainternet"
+      header: "Hoje, este deputado tentará novamente destruir a sua internet"
+      lead: "Temos poucas horas para garantir a neutralidade da rede e a liberdade de expressão na internet. Pressione os deputados agora!"
+    twitter:
+      message_1: "Faltam poucas horas para a votação do Marco Civil. Mexa-se! Compartilhe"
+      message_2: "Deputad@s: neutralidade da rede, privacidade do usuário e liberdade de expressão são inegociáveis"
+      message_3: "Nenhum direito a menos: Marco Civil Já com Liberdade, Neutralidade e Privacidade da rede"
+      message_4: "Atenção deputad@s: quem destruir a internet vai ser cobrado nas urnas "
+      message_5: "A Internet não pode ser transformada em TV a cabo: salvem a #neutralidade da rede!"
+      hashtag_1: "EuQueroMarcoCivil"
+      hashtag_2: "MarcoCivil"
