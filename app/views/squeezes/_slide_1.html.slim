@@ -71,7 +71,9 @@
         = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url(anchor: "compartilhaco"))}", id: "facebook-share-button", class: [:button, :large, :radius, "facebook-share-button"]
       - else
         = link_to image_tag("facebook-account-registration-button.png"), "/auth/facebook", id: "facebook-account-registration-button"
-        = image_tag("facebook-preview.jpg")
+        .post
+          = image_tag "compartilhaco.jpg"
+          .title= t("share.facebook.title")
 
     .twitter
       - if session[:twitter_authorization_id].present?
@@ -84,7 +86,10 @@
         = link_to "Tweet", "https://twitter.com/share?url=#{URI::encode(root_url(anchor: "compartilhaco"))}&text=#{URI::encode(t("share.twitter.text"))}&hashtags=salveainternet", id: "twitter-share-button", class: [:button, :large, :radius, "twitter-share-button"]
       - else
         = link_to image_tag("twitter-account-registration-button.png"), "/auth/twitter", id: "twitter-account-registration-button"
-        = image_tag("twitter-preview.jpg")
+        .tweet
+          span @seunome 
+          = t("share.twitter.text")
+          span  #salveainternet
 
 #share.medium.reveal-modal{data-reveal=true}
   p.lead Uma das belezas da Internet é que é muito fácil espalhar informações usando as suas redes. E agora é a hora de usar a internet para salvar a internet!

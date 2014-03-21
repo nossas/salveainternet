@@ -1,0 +1,62 @@
+@media (max-width: 900px)
+  .slide-2
+    .title-left
+      text-align: center
+    .title-left, .box-right, .bottom-text
+      +grid-column(12)
+
+  .slide-4
+    .left-text
+      text-align: center
+    .left-text, .box-left, .image-right
+      +grid-column(12)
+    .box-left, .image-right
+      margin-bottom: 1em
+
+  .slide-5
+    .h2-left
+      +grid-column(12)
+      text-align: center
+      margin-bottom: 1em
+    .box-left
+      +grid-column(12)
+      margin-bottom: 1em
+      .box
+        text-align: left
+        font-size: 1em
+    .h3-right
+      +grid-column(12)
+      text-align: center
+
+  .slide-7
+    .h2-left, .box-right
+      +grid-column(12)
+    .h2-left
+      text-align: center
+
+  .slide-9
+    .h2-left
+      +grid-column(12)
+      text-align: center
+    .p-right
+      +grid-column(12)
+
+@media (max-width: 750px)
+  form
+    +grid-column(6, true, true)
+  .first_name_field, .last_name_field, .email_field, .submit_button
+    +grid-column(12)
+  .first_name_field, .last_name_field, .email_field
+    margin-bottom: 1em
+
+@media (max-width: 500px)
+  form
+    +grid-column(8, true, true)
+  
+  .meu-rio-and-counter
+    .meu-rio
+      margin-bottom: 1em
+    .meu-rio, .counter
+      +grid-column(12)
+      .digits-and-label
+        float: left
