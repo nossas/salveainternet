@@ -87,7 +87,7 @@
             | Compartilhe esta mobilização
             br
             | com os seus amigos agora!
-        = link_to "Tweet", "https://twitter.com/share?url=#{URI::encode("http://bit.ly/tuitaco#compartilhaco")}&text=#{URI::encode(t("share.twitter.text"))}&hashtags=salveainternet", id: "twitter-share-button", class: [:button, :large, :radius, "twitter-share-button"]
+        = link_to "Tweet", "https://twitter.com/share?url=#{URI::encode("http://bit.ly/tuitaco")}&text=#{URI::encode(t("share.twitter.text"))}", id: "twitter-share-button", class: [:button, :large, :radius, "twitter-share-button"]
       - else
         = link_to image_tag("twitter-account-registration-button.png"), "/auth/twitter", id: "twitter-account-registration-button"
         .tweet
