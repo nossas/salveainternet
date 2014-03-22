@@ -73,6 +73,7 @@
       - else
         = link_to image_tag("facebook-account-registration-button.png"), "/auth/facebook", id: "facebook-account-registration-button"
         .post
+          .message= t("compartilhaco.facebook.message")
           .image= image_tag "compartilhaco.jpg"
           .info
             .title= t("compartilhaco.facebook.header")
