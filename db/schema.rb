@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20140324134447) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "secret",     default: "update me", null: false
-    t.integer  "tweet_id"
+    t.string   "tweet_id"
   end
 
 end
