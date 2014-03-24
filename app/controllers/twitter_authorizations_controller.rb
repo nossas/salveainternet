@@ -7,6 +7,7 @@ class TwitterAuthorizationsController < ApplicationController
       twitter_authorization.name = auth[:info][:name]
       twitter_authorization.image = auth[:info][:image]
       twitter_authorization.token = auth[:credentials][:token]
+      twitter_authorization.secret = auth[:credentials][:secret]
       twitter_authorization.save
     end
 
