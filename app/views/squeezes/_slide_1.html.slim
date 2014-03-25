@@ -91,11 +91,7 @@
         = link_to "Tweet", "https://twitter.com/share?url=#{URI::encode("http://bit.ly/tuitaco")}&text=#{URI::encode(t("share.twitter.text"))}", id: "twitter-share-button", class: [:button, :large, :radius, "twitter-share-button"]
       - else
         = link_to image_tag("twitter-account-registration-button.png"), "/auth/twitter", id: "twitter-account-registration-button"
-        .tweet
-          span @seunome 
-          = t("compartilhaco.twitter.message_#{rand(5) + 1}")
-          span  http://bit.ly/salveainternet 
-          span #hashtagsurpresa
+        .tweet= t("compartilhaco.twitter.message_#{rand(5) + 1}")
         small * a hashtag a ser usada só será revelada no dia para evitar usos indevidos
 
 #share.medium.reveal-modal{data-reveal=true}
