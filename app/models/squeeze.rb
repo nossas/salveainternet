@@ -18,8 +18,8 @@ class Squeeze < ActiveRecord::Base
 
   def send_mail
     begin
-      SqueezeMailer.delay.dont_let_them_limit_our_access_to_the_internet(self)
-      SqueezeMailer.delay.you_cant_negotiate_the_neutrality_of_the_internet(self)
+      SqueezeMailer.dont_let_them_limit_our_access_to_the_internet(self)
+      SqueezeMailer.you_cant_negotiate_the_neutrality_of_the_internet(self)
     rescue Exception => e
       Rails.logger.error e
     end
