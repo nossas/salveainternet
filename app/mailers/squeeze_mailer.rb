@@ -3,12 +3,12 @@ class SqueezeMailer < ActionMailer::Base
 
   def dont_let_them_limit_our_access_to_the_internet squeeze
     @squeeze = squeeze
-    headers["X-MC-Tags"] = "salveainternet, dont_let_them_limit_our_access_to_the_internet"
+    headers["X-MC-Tags"] = "salveainternet,dont_let_them_limit_our_access_to_the_internet"
     mail(to: @squeeze.email, subject: "Pressão nos senadores: use a internet para salvar a internet!")
   end
 
   def you_cant_negotiate_the_neutrality_of_the_internet squeeze
-    headers["X-MC-Tags"] = "salveainternet, you_cant_negotiate_the_neutrality_of_the_internet"
+    headers["X-MC-Tags"] = "salveainternet,you_cant_negotiate_the_neutrality_of_the_internet"
     mail(to: DEPUTIES_EMAILS, subject: "Senador, aprove o Marco Civil votado pela Câmara", from: "#{squeeze.first_name} #{squeeze.last_name} <#{squeeze.email}>")
   end
 end
