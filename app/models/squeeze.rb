@@ -17,7 +17,11 @@ class Squeeze < ActiveRecord::Base
   end
 
   def locate
-    location = Ipaddresslabs.locate(self.ip)
-    self.city = location["geolocation_data"]["city"]
+    begin
+      location = Ipaddresslabs.locate(self.ip)
+      self.city = location["geolocation_data"]["city"]
+    rescue Exception => e
+      Rails.logger.error e
+    end
   end
 end
