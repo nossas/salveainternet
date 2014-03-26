@@ -54,12 +54,12 @@ gem 'fabrication'
 gem 'delayed_job_active_record'
 gem 'selenium-webdriver'
 gem 'gibbon'
-gem 'geocoder'
 gem 'omniauth-facebook'
 gem "koala", "~> 1.8.0rc1"
 gem 'omniauth-twitter'
 gem 'compass-rails'
 gem 'twitter'
+gem 'ipaddresslabs'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

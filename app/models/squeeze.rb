@@ -3,7 +3,7 @@ class Squeeze < ActiveRecord::Base
   validates :email, uniqueness: true
 
   after_create { self.delay.add_to_mailchimp_segment }
-  after_validation { self.city = Geocoder.search(self.ip).first.try(:city) }
+  after_validation :locate
 
   def add_to_mailchimp_segment
     if !Rails.env.test?
@@ -14,5 +14,10 @@ class Squeeze < ActiveRecord::Base
         Rails.logger.error e
       end
     end
+  end
+
+  def locate
+    location = Ipaddresslabs.locate(self.ip)
+    self.city = location["geolocation_data"]["city"]
   end
 end
