@@ -47,48 +47,47 @@
   p Responda publicamente a essa demanda enviando um e-mail para resposta@paneladepressao.org.br
   a class="close-reveal-modal" &#215;
 
-/
-  #compartilhaco.large.reveal-modal{data-reveal=true}
-    a class="close-reveal-modal" &#215;
-    .row
-      .text
-        p.lead Participe do compartilhaço e tuitaço pelo Marco Civil!
-        p A votação do Marco Civil será amanhã, e Eduardo Cunha e seus aliados continuam lutando para alterar o texto atual e aprovar suas emendas. Agora, querem retirar o artigo 20, que garante a liberdade de expressão, do texto. Vamos deixar claro para os deputados que a liberdade de expressão, a neutralidade da rede e a privacidade dos usuários não são negociáveis. O texto precisa ser aprovado como está!
-        p Se milhares de pessoas cadastrarem suas timelines de Facebook e Twitter para fazer a mesma publicação amanhã (25/03) às 12h, o impacto das nossas vozes será muito maior e ecoará em alto e bom som nos corredores do Congresso.
-        
-    .row
-      .facebook
-        - if session[:facebook_authorization_id].present?
-          = image_tag("facebook-account-registration-button-disabled.png", id: "facebook-account-registration-button-disabled")
-          p
-            strong
-              | Compartilhe esta mobilização
-              br
-              | com os seus amigos agora!
-          = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url(anchor: "compartilhaco"))}", id: "facebook-share-button", class: [:button, :large, :radius, "facebook-share-button"]
-        - else
-          = link_to image_tag("facebook-account-registration-button.png"), "/auth/facebook", id: "facebook-account-registration-button"
-          .post
-            .message= t("compartilhaco.facebook.message")
-            .image= image_tag "compartilhaco.jpg"
-            .info
-              .title= t("compartilhaco.facebook.header")
-              .link http://bit.ly/salveainternet
-              .lead= t("compartilhaco.facebook.lead")
-  
-      .twitter
-        - if session[:twitter_authorization_id].present?
-          = image_tag("twitter-account-registration-button-disabled.png", id: "twitter-account-registration-button-disabled")
-          p
-            strong
-              | Compartilhe esta mobilização
-              br
-              | com os seus amigos agora!
-          = link_to "Tweet", "https://twitter.com/share?url=#{URI::encode("http://bit.ly/tuitaco")}&text=#{URI::encode(t("share.twitter.text"))}", id: "twitter-share-button", class: [:button, :large, :radius, "twitter-share-button"]
-        - else
-          = link_to image_tag("twitter-account-registration-button.png"), "/auth/twitter", id: "twitter-account-registration-button"
-          .tweet= t("compartilhaco.twitter.message_#{rand(5) + 1}")
-          small * a hashtag a ser usada só será revelada no dia para evitar usos indevidos
+#compartilhaco.large.reveal-modal{data-reveal=true}
+  a class="close-reveal-modal" &#215;
+  .row
+    .text
+      p.lead Participe do compartilhaço e tuitaço pelo Marco Civil!
+      p A votação do Marco Civil será amanhã, e Eduardo Cunha e seus aliados continuam lutando para alterar o texto atual e aprovar suas emendas. Agora, querem retirar o artigo 20, que garante a liberdade de expressão, do texto. Vamos deixar claro para os deputados que a liberdade de expressão, a neutralidade da rede e a privacidade dos usuários não são negociáveis. O texto precisa ser aprovado como está!
+      p Se milhares de pessoas cadastrarem suas timelines de Facebook e Twitter para fazer a mesma publicação amanhã (25/03) às 12h, o impacto das nossas vozes será muito maior e ecoará em alto e bom som nos corredores do Congresso.
+      
+  .row
+    .facebook
+      - if session[:facebook_authorization_id].present?
+        = image_tag("facebook-account-registration-button-disabled.png", id: "facebook-account-registration-button-disabled")
+        p
+          strong
+            | Compartilhe esta mobilização
+            br
+            | com os seus amigos agora!
+        = link_to "Compartilhe", "https://www.facebook.com/sharer/sharer.php?u=#{URI::encode(root_url(anchor: "compartilhaco"))}", id: "facebook-share-button", class: [:button, :large, :radius, "facebook-share-button"]
+      - else
+        = link_to image_tag("facebook-account-registration-button.png"), "/auth/facebook", id: "facebook-account-registration-button"
+        .post
+          .message= t("compartilhaco.facebook.message")
+          .image= image_tag "compartilhaco.jpg"
+          .info
+            .title= t("compartilhaco.facebook.header")
+            .link http://bit.ly/salveainternet
+            .lead= t("compartilhaco.facebook.lead")
+
+    .twitter
+      - if session[:twitter_authorization_id].present?
+        = image_tag("twitter-account-registration-button-disabled.png", id: "twitter-account-registration-button-disabled")
+        p
+          strong
+            | Compartilhe esta mobilização
+            br
+            | com os seus amigos agora!
+        = link_to "Tweet", "https://twitter.com/share?url=#{URI::encode("http://bit.ly/tuitaco")}&text=#{URI::encode(t("share.twitter.text"))}", id: "twitter-share-button", class: [:button, :large, :radius, "twitter-share-button"]
+      - else
+        = link_to image_tag("twitter-account-registration-button.png"), "/auth/twitter", id: "twitter-account-registration-button"
+        .tweet= t("compartilhaco.twitter.message_#{rand(5) + 1}")
+        small * a hashtag a ser usada só será revelada no dia para evitar usos indevidos
 
 #share.medium.reveal-modal{data-reveal=true}
   p.lead Uma das belezas da Internet é que é muito fácil espalhar informações usando as suas redes. E agora é a hora de usar a internet para salvar a internet!
