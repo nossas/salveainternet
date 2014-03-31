@@ -81,12 +81,13 @@ Salveainternet::Application.configure do
   default_url_options[:host] = "salveainternet.meurio-staging.org.br"
 
   ActionMailer::Base.smtp_settings = {
-    :port =>           '587',
-    :address =>        'smtp.mandrillapp.com',
-    :user_name =>      ENV['MANDRILL_USERNAME'],
-    :password =>       ENV['MANDRILL_APIKEY'],
-    :domain =>         'salveainternet.meurio-staging.org.br',
-    :authentication => :plain
+    :user_name => ENV["SENDGRID_USERNAME"],
+    :password => ENV["SENDGRID_PASSWORD"],
+    :domain => 'salveainternet.meurio-staging.org.br',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
   ActionMailer::Base.delivery_method = :smtp
