@@ -41,7 +41,11 @@ if Rails.env.production?
     "Marcelo Crivella <crivella@senador.leg.br>",
     "Vicentinho Alves <vicentinho.alves@senador.leg.br>",
     "Ataídes Oliveira <ataides.oliveira@senador.leg.br>",
-    "Eduardo Braga <eduardo.braga@senador.leg.br>"
+    "Eduardo Braga <eduardo.braga@senador.leg.br>",
+    "Vital do Rêgo <vital.rego@senador.leg.br>",
+    "Zezé Perrella <zeze.perrella@senador.leg.br>",
+    "Luiz Henrique <luizhenrique@senador.leg.br>",
+    "Ricardo Ferraço <ricardoferraco@senador.leg.br>"
   ]
 else
   raise "TEST_EMAIL is missing" if ENV["TEST_EMAIL"].nil?
