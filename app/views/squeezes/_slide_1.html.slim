@@ -16,13 +16,14 @@
   .row
     .wraper
       h2
-        | NOSSA LIBERDADE NA INTERNET AGORA
+        | VITÓRIA! NEUTRALIDADE E LIBERDADE
         br
-        | ESTÁ NAS MÃOS DOS SENADORES
-      p Primeira vitória! Depois de mais de 38 mil cidadãos se mobilizarem para enviar sua mensagem aos líderes partidários, a Câmara dos Deputados finalmente aprovou o Marco Civil da Internet que garante plenamente a neutralidade da rede e a liberdade de expressão na internet, dois dos pilares essenciais para a construção de uma web livre e democrática.
-      p Juntos, conseguimos derrotar o deputado Eduardo Cunha e o poderoso lobby das teles, que queriam desfigurar o projeto. Mas a guerra ainda não está vencida. Agora, o projeto tem que ser votado pelo Senado para virar lei. Precisamos mostrar aos senadores que a sociedade civil não abre mão desses princípios e quer que o Marco Civil seja votado sem alterações que possam servir a interesses escusos.
-      p.highlight Deixe seu nome e e-mail no formulário abaixo, e nossa equipe mandará um email em seu nome diretamente a todos os líderes partidários no Senado.
-  .form_wraper
+        | DE EXPRESSÃO GARANTIDAS NO CONGRESSO
+      p Depois de mais de 42 mil cidadãos se mobilizarem para enviar sua mensagem aos líderes partidários, o Congresso finalmente aprovou o texto do Marco Civil da Internet, preservando a neutralidade da rede e a liberdade de expressão.
+
+      p Com a nossa pressão, conseguimos derrotar o deputado Eduardo Cunha e o poderoso lobby das teles, e evitamos que os senadores alterassem os pilares do projeto. Uma vitória importante para a sociedade, que só foi possível graças a participação massiva de milhares de pessoas engajadas em uma internet livre e democrática.
+      
+  / .form_wraper
     .row
       = form_for @squeeze, html: { "data-abide" => true } do |form|
         .row
@@ -34,7 +35,7 @@
             = form.email_field :email, placeholder: "Insira seu email", required: true
           .submit_button
             = form.submit "Enviar email", id: 'squeeze-submit-button', class: [:button, :radius]
-  .row.email_message
+  / .row.email_message
     .wraper
       = link_to "Quero ver o email que será enviado", "#email", "data-reveal-id" => "email", "data-reveal" => true
 
